@@ -14,8 +14,7 @@
     "lint": "eslint --ext .ts src",
     "lint:fix": "eslint --fix --ext .ts src",
     "test": "jest",
-    "prepublish": "yarn build && yarn version",
-    "preversion": "yarn lint && yarn test"
+    "prepublish": "yarn build && yarn test"
   },
   "repository": {
     "type": "git",
