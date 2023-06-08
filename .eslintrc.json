@@ -1,0 +1,35 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "standard-with-typescript"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "jest.config.ts",
+        "__tests__/jestSetup.ts",
+        "**/*.spec.ts"
+      ],
+      "env": {
+        "jest": true
+      },
+      "parserOptions": {
+        "project": "./jest.tsconfig.json"
+      }
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {}
+}

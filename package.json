@@ -1,0 +1,53 @@
+{
+  "name": "langchain-text-generation-webui",
+  "version": "0.1.0",
+  "description": "text-generation-webui api implementation to use with langchain",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "lint": "eslint --ext .ts src",
+    "lint:fix": "eslint --fix --ext .ts src",
+    "test": "jest",
+    "prepublish": "yarn build && yarn version",
+    "preversion": "yarn lint && yarn test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SrJuggernaut/langchain-text-generation-webui.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SrJuggernaut/langchain-text-generation-webui/issues"
+  },
+  "homepage": "https://github.com/SrJuggernaut/langchain-text-generation-webui#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
+    "@types/istanbul-lib-coverage": "^2.0.4",
+    "@types/jest": "^29.5.2",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "husky": "^8.0.3",
+    "jest": "^29.5.0",
+    "jest-fetch-mock": "^3.0.3",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "*"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "axios": "^1.4.0",
+    "langchain": "^0.0.88"
+  }
+}
